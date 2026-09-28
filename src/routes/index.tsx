@@ -18,8 +18,8 @@ const serviceLinks = [
     to: "/Servicebackyards",
   },
   {
-    label: "SNOW REMOVAL",
-    to: "/Servicesnowremoval",
+    label: "INTERIORS",
+    to: "/Serviceinteriors",
   },
 ] as const;
 
@@ -50,7 +50,7 @@ export function SiteNav() {
             </div>
           </Link>
 
-          {/* MAIN DESKTOP NAV */}
+          {/* DESKTOP MAIN NAV */}
           <nav
             className="hidden items-center gap-8 lg:flex"
             aria-label="Main navigation"
@@ -117,7 +117,9 @@ export function SiteNav() {
               <Link
                 key={service.label}
                 to={service.to}
-                activeOptions={{ exact: true }}
+                activeOptions={{
+                  exact: true,
+                }}
                 className="relative flex min-h-[54px] items-center justify-center border-r border-black/10 px-6 text-[10px] font-bold uppercase tracking-[0.2em] transition duration-200 first:border-l md:px-8 md:text-xs lg:flex-1"
                 activeProps={{
                   className:
