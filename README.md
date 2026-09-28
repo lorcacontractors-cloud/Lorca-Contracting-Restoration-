@@ -1,0 +1,24 @@
+# Lorca Blueprint
+
+Act as an expert web designer and conversion-focused copywriter specializing in high-end home improvement, outdoor living, and residential contracting services. Create a full, production-ready website blueprint and comprehensive written page copy for my business, Lorca Restoration and Contracting, serving Mississauga, Ontario, and the surrounding regions. Business & Brand Context: Business Name: Lorca Restoration and Contracting. Core Specialty: Full-scale outdoor hardscaping, patio builds, paver stone walkways, retaining walls, comprehensive backyard transformations, and selective indoor home renovations. Service Clarification: We are full-scale structural builders and restoration contractors. We DO NOT offer routine lawn mowing, grass cutting, or basic garden maintenance. Target Audience: Homeowners looking to upgrade their living space, enhance outdoor entertaining areas, increase property value, and invest in durable, high-quality craftwork. Location/Service Area: Mississauga, Ontario and surrounding communities. Brand Tone: Professional, reliable, clean, high-end, straightforward, and trustworthy. Instructions for Website Output: Please generate complete, ready-to-use section-by-section copy, layout instructions, headlines, subheadlines, and Call-to-Action (CTA) prompts for the following pages: 1. HOMEPAGE. Hero Section: High-converting headline and subheadline emphasizing premium outdoor living and home transformations in Mississauga. Primary CTA button copy leading to a quote request. A clear secondary line making it explicit that we focus on full-scale hardscaping and renovations, not routine lawn care. Core Services Grid: Section header and intro copy. Visual layout recommendations and short promotional copy for 4 key offerings: (1) Custom Patios & Hardscaping, (2) Paver Stone Walkways & Driveways, (3) Full Backyard Transformations, and (4) Interior Renovations & Contracting. The Lorca Process (4-Step Build Journey): Clear step-by-step framework explaining how we work with clients from initial consultation and design through execution and final cleanup. Why Choose Us / Quality Guarantee: Bulleted selling points highlighting durability, craftsmanship, precision installation, and clean job site management. Portfolio & Transformation Showcase: Layout guidelines for before-and-after photo galleries and customer reviews/testimonials. Final High-Intent CTA Section: Headline and copy urging homeowners to schedule a project consultation. 2. OUTDOOR SERVICES PAGE (Hardscaping & Backyard Renovations). Page Intro: Highlighting our approach to building outdoor living spaces that withstand Canadian weather and wear. Detailed Breakdown: Written sections complete with bullet points for: Custom Patios & Outdoor Living Areas; Paver Walkways, Steps & Driveway Borders; Retaining Walls & Heavy Hardscaping; Backyard Renovations & Surface Restorations. Call to Action: Directing users to submit project details for an estimate. 3. INDOOR RENOVATIONS PAGE. Page Intro: Highlighting our precision, clean work environment, and quality indoor contractor services. Detailed Breakdown: Overview of our interior remodeling services, focus on quality materials, and structural attention to detail. Call to Action: Prompts to request an interior consultation. 4. CONTACT & ESTIMATE REQUEST PAGE. Form Layout & Filtering Design: Provide specific, high-intent contact form questions and required dropdown fields to automatically qualify leads and filter out routine grass-cutting inquiries. Include fields for: Contact Info (Name, Email, Phone, Address/City); Project Type Dropdown (Custom Patio / Paver Walkway / Backyard Renovation / Indoor Renovation / Restoration); Estimated Budget Range Dropdown ($5,000–$15,000 | $15,000–$30,000 | $30,000+); Desired Timeline Dropdown (ASAP | Within 1–2 Months | Flexible / Planning Stage); Project Description Text Box. Direct Contact Info: Placeholder structure for phone number, service area map/list, and response time expectations. Please write out all of the text in full without placeholders or truncated summaries so it is completely ready for my live website.
+
+This project was built with [Lovable](https://lovable.dev).
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b0343cdd-0953-40a2-9915-19396a1db7f0).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
+```
