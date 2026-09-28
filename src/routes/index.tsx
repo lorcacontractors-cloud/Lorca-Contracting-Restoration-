@@ -4,210 +4,153 @@ import { SiteFooter } from "@/components/SiteFooter";
 
 /*
 |--------------------------------------------------------------------------
-| HOMEPAGE IMAGES
+| PUBLIC IMAGE URLS
 |--------------------------------------------------------------------------
-| These are public image URLs, so you do NOT need to add them to
-| your public/images folder.
+| Public Unsplash URLs only.
+| No local "@/assets/" imports.
 */
 
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=85";
+  "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=2200&q=85";
+
+const COMMERCIAL_IMAGE =
+  "https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&fit=crop&w=1800&q=85";
+
+const RESIDENTIAL_IMAGE =
+  "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1800&q=85";
+
+const SIDEWALK_IMAGE =
+  "https://images.unsplash.com/photo-1491002052546-bf38f186af56?auto=format&fit=crop&w=1800&q=85";
+
+const WINTER_IMAGE =
+  "https://images.unsplash.com/photo-1516431883659-655d41c09bf9?auto=format&fit=crop&w=1800&q=85";
+
+const SALT_IMAGE =
+  "https://images.unsplash.com/photo-1457269449834-928af64c684d?auto=format&fit=crop&w=1800&q=85";
 
 /*
 |--------------------------------------------------------------------------
-| SERVICE CATEGORY IMAGES
+| SERVICE DATA
 |--------------------------------------------------------------------------
 */
 
-// 01 — CUSTOM PATIOS
-const PATIO_IMAGE =
-  "https://pub-650ffd2665d0491fbe2d80bbe43ebc50.r2.dev/brands/Legacy-Landscaping-Etobicoke/Images/Services/Paver-patio-installation/legacy-landscaping-etobicoke-landscaping-service-in-etobicoke-npzu.webp";
-
-// 02 — WALKWAYS & STEPS
-const WALKWAY_IMAGE =
-  "https://www.redroselandscaping.com/uploads/1/1/6/7/116777229/img-7450_orig.jpeg";
-
-// 03 — RETAINING WALLS
-const RETAINING_IMAGE =
-  "https://www.garden.eco/img/image9_stone-retaining-wall-ideas-for-sloped-backyard_functional-and-beauti.jpg";
-
-// 04 — BACKYARD RENOVATIONS
-const BACKYARD_IMAGE =
-  "https://captainhandy.ca/wp-content/uploads/2024/07/Backyard-interlocking-in-GTA-jpg.webp";
-
-/*
-|--------------------------------------------------------------------------
-| PROJECT IMAGES
-|--------------------------------------------------------------------------
-*/
-
-const BEFORE_IMAGE =
-  "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=85";
-
-const AFTER_IMAGE =
-  "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=85";
-
-/*
-|--------------------------------------------------------------------------
-| SERVICES
-|--------------------------------------------------------------------------
-*/
-
-const services = [
+const snowServices = [
   {
     number: "01",
-    title: "Custom Patios",
-    label: "Outdoor Living",
-    image: PATIO_IMAGE,
-    imageAlt:
-      "Interlocking stone patio and outdoor living area",
+    title: "Commercial Snow Plowing",
     description:
-      "Custom interlocking patios designed around your home, property and the way you want to use your outdoor space.",
-    href: "/Servicepatios",
+      "Snow clearing for commercial properties, parking areas, access lanes and other high-traffic exterior areas.",
   },
   {
     number: "02",
-    title: "Walkways & Steps",
-    label: "Entrances",
-    image: WALKWAY_IMAGE,
-    imageAlt:
-      "Interlocking stone walkway and front entrance steps",
+    title: "Residential Snow Removal",
     description:
-      "Walkways, entrances and steps designed to connect your property with clean lines and a finished appearance.",
-    href: "/Servicewalkways",
+      "Driveway and property snow clearing for homeowners who want dependable winter property maintenance.",
   },
   {
     number: "03",
-    title: "Retaining Walls",
-    label: "Structure",
-    image: RETAINING_IMAGE,
-    imageAlt:
-      "Landscape retaining wall built with stone blocks",
+    title: "Sidewalk Clearing",
     description:
-      "Retaining features that help organize elevation changes while adding structure and definition to the property.",
-    href: "/Serviceretainingwalls",
+      "Snow clearing for sidewalks, entrances, pedestrian routes and other areas people need to safely access throughout winter.",
   },
   {
     number: "04",
-    title: "Backyard Renovations",
-    label: "Complete Spaces",
-    image: BACKYARD_IMAGE,
-    imageAlt:
-      "Complete backyard renovation with interlocking and landscaping",
+    title: "Salting & Ice Management",
     description:
-      "Transform underused outdoor areas into cohesive spaces with patios, walkways, steps and hardscape features.",
-    href: "/Servicebackyards",
-  },
-] as const;
-
-/*
-|--------------------------------------------------------------------------
-| BUILD POINTS
-|--------------------------------------------------------------------------
-*/
-
-const buildPoints = [
-  {
-    number: "01",
-    title: "Proper Site Preparation",
-    description:
-      "The finished surface is only as strong as what is underneath it. We focus on excavation, preparation, grading and compaction before the visible work begins.",
-  },
-  {
-    number: "02",
-    title: "Built for Ontario",
-    description:
-      "Ontario weather puts hardscaping through repeated freeze-thaw cycles. Drainage, grading and proper preparation are considered from the beginning.",
-  },
-  {
-    number: "03",
-    title: "Clean Installation",
-    description:
-      "Straight lines, controlled joints, defined edges and a clean finished site are all part of the installation.",
+      "De-icing service for appropriate paved surfaces to help manage slippery conditions around entrances, walkways and parking areas.",
   },
 ];
 
-/*
-|--------------------------------------------------------------------------
-| PROCESS
-|--------------------------------------------------------------------------
-*/
+const commercialAreas = [
+  "Parking areas",
+  "Property entrances",
+  "Access lanes",
+  "Pedestrian walkways",
+  "Building entrances",
+  "Loading and service areas",
+];
 
-const process = [
+const residentialAreas = [
+  "Driveways",
+  "Front entrances",
+  "Walkways",
+  "Sidewalks",
+  "Steps",
+  "Pedestrian access areas",
+];
+
+const winterProcess = [
   {
     number: "01",
-    title: "Consultation",
+    title: "Property Assessment",
     description:
-      "We discuss the property, your goals, materials, layout and the scope of work.",
+      "We review the property, access points, priority areas and the surfaces that need winter maintenance.",
   },
   {
     number: "02",
-    title: "Site Assessment",
+    title: "Service Plan",
     description:
-      "We evaluate the existing surface, access, grading, drainage and preparation required.",
+      "The required plowing, clearing and ice-management areas are identified before winter service begins.",
   },
   {
     number: "03",
-    title: "Build",
+    title: "Snow Clearing",
     description:
-      "The project moves through preparation, installation and finishing with attention to the details underneath and on the surface.",
+      "Snow is cleared from the agreed service areas with attention to entrances, traffic routes and usable access.",
   },
   {
     number: "04",
-    title: "Final Walkthrough",
+    title: "Ice Management",
     description:
-      "We complete the cleanup, review the finished work and make sure the project is left looking finished.",
+      "Where included in the service plan, appropriate de-icing material can be applied to designated surfaces when conditions require it.",
   },
 ];
-
-/*
-|--------------------------------------------------------------------------
-| FAQ
-|--------------------------------------------------------------------------
-*/
 
 const faqs = [
   {
-    question: "What areas does Lorca Contracting serve?",
+    question: "Do you provide commercial snow removal?",
     answer:
-      "We are based in Mississauga and serve surrounding GTA communities. Contact us with your project address and scope so we can confirm availability.",
+      "Yes. Lorca Contracting can provide winter property maintenance for suitable commercial properties, including snow plowing, pedestrian-area clearing and ice-management services.",
   },
   {
-    question: "Do you install interlocking patios?",
+    question: "Do you provide residential snow removal?",
     answer:
-      "Yes. Our hardscaping services include custom patios, walkways, steps and other outdoor hardscape applications.",
+      "Yes. Residential service can include driveways, entrances, walkways and other agreed exterior access areas.",
   },
   {
-    question: "Why is base preparation important?",
+    question: "Do you provide salting?",
     answer:
-      "The base supports the finished surface and plays an important role in long-term stability, drainage and resistance to seasonal movement.",
+      "Salting and ice-management service can be included for appropriate surfaces as part of the property's winter maintenance plan.",
   },
   {
-    question: "Can you replace an existing patio or walkway?",
+    question: "Can you clear sidewalks and entrances?",
     answer:
-      "Yes. We can assess the condition of an existing installation and determine whether repair, rebuilding or replacement makes the most sense.",
+      "Yes. Pedestrian areas such as sidewalks, pathways and entrances can be included in the agreed service scope.",
+  },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "Lorca Contracting is based in Mississauga and serves surrounding GTA communities. Contact us with the property location so we can confirm service availability.",
+  },
+  {
+    question: "Can I arrange service for the winter season?",
+    answer:
+      "Contact Lorca with the property address, property type and areas requiring service so we can discuss the winter service options available for your property.",
   },
 ];
 
-/*
-|--------------------------------------------------------------------------
-| ROUTE
-|--------------------------------------------------------------------------
-*/
-
-export const Route = createFileRoute("/")({
-  component: HomePage,
-
+export const Route = createFileRoute("/Servicesnowremoval")({
+  component: SnowRemovalPage,
   head: () => ({
     meta: [
       {
         title:
-          "Lorca Contracting | Hardscaping & Outdoor Renovations in Mississauga",
+          "Snow Removal Mississauga | Commercial & Residential | Lorca Contracting",
       },
       {
         name: "description",
         content:
-          "Lorca Contracting provides patios, walkways, retaining walls and backyard renovations in Mississauga and surrounding GTA communities.",
+          "Commercial and residential snow removal in Mississauga and the GTA. Snow plowing, sidewalk clearing, salting and winter property management from Lorca Contracting.",
       },
       {
         name: "robots",
@@ -216,12 +159,12 @@ export const Route = createFileRoute("/")({
       {
         property: "og:title",
         content:
-          "Lorca Contracting | Hardscaping & Outdoor Renovations",
+          "Snow Removal in Mississauga | Lorca Contracting",
       },
       {
         property: "og:description",
         content:
-          "Premium hardscaping and outdoor renovations across Mississauga and surrounding GTA communities.",
+          "Commercial and residential snow plowing, sidewalk clearing, salting and winter property maintenance in Mississauga and the GTA.",
       },
       {
         property: "og:type",
@@ -231,13 +174,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-/*
-|--------------------------------------------------------------------------
-| HOME PAGE
-|--------------------------------------------------------------------------
-*/
-
-function HomePage() {
+function SnowRemovalPage() {
   return (
     <div className="min-h-screen bg-[#f3f1ec] text-[#151515]">
       <SiteNav />
@@ -249,44 +186,44 @@ function HomePage() {
       <section className="relative min-h-[720px] overflow-hidden bg-black">
         <img
           src={HERO_IMAGE}
-          alt="Premium outdoor hardscaping and patio construction in Mississauga"
+          alt="Snow covered property in winter"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
 
         <div className="relative mx-auto flex min-h-[720px] max-w-[1500px] items-end px-6 pb-20 md:px-10 lg:px-16 lg:pb-28">
           <div className="max-w-5xl text-white">
-            <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-white/65">
-              Hardscaping · Restoration · Outdoor Construction
+            <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-white/60">
+              Snow Plowing · Salting · Winter Maintenance
             </p>
 
-            <h1 className="text-5xl font-semibold leading-[0.9] tracking-[-0.055em] sm:text-6xl md:text-8xl lg:text-[100px]">
-              Built properly.
+            <h1 className="text-5xl font-semibold leading-[0.9] tracking-[-0.055em] sm:text-6xl md:text-8xl lg:text-[96px]">
+              Winter doesn't
               <br />
-              Built to last.
+              stop the property.
             </h1>
 
             <p className="mt-8 max-w-2xl text-base leading-8 text-white/75 md:text-xl">
-              Premium patios, walkways, retaining walls and outdoor
-              renovations across Mississauga and the GTA — designed around
-              the property and built from the ground up.
+              Commercial and residential snow removal, sidewalk clearing,
+              salting and winter property maintenance across Mississauga and
+              surrounding GTA communities.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                href="tel:6472212909"
+                href="#estimate"
                 className="inline-flex items-center justify-center bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-black transition hover:bg-white/90"
               >
-                Call 647-221-2909
+                Request Snow Service
               </a>
 
               <a
-                href="#estimate"
+                href="tel:6472212909"
                 className="inline-flex items-center justify-center border border-white/40 bg-white/10 px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm transition hover:bg-white/20"
               >
-                Request an Estimate
+                Call 647-221-2909
               </a>
             </div>
           </div>
@@ -294,39 +231,98 @@ function HomePage() {
       </section>
 
       {/* =========================================================
-          TRUST STRIP
+          QUICK SERVICE STRIP
       ========================================================= */}
 
       <section className="border-b border-black/10 bg-[#e9e5dc]">
-        <div className="mx-auto grid max-w-[1500px] md:grid-cols-3">
-          <div className="border-b border-black/10 px-6 py-8 md:border-b-0 md:border-r md:px-10 lg:px-16">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-black/40">
-              01 / Foundation
+        <div className="mx-auto grid max-w-[1500px] md:grid-cols-4">
+          <div className="border-b border-black/10 px-6 py-7 md:border-b-0 md:border-r md:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/40">
+              01 / Plowing
             </p>
-
-            <p className="mt-2 text-lg font-semibold">
-              Proper preparation first.
-            </p>
+            <p className="mt-2 font-semibold">Snow Removal</p>
           </div>
 
-          <div className="border-b border-black/10 px-6 py-8 md:border-b-0 md:border-r md:px-10 lg:px-16">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-black/40">
-              02 / Installation
+          <div className="border-b border-black/10 px-6 py-7 md:border-b-0 md:border-r md:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/40">
+              02 / Pedestrian
             </p>
-
-            <p className="mt-2 text-lg font-semibold">
-              Clean lines. Tight joints.
-            </p>
+            <p className="mt-2 font-semibold">Sidewalk Clearing</p>
           </div>
 
-          <div className="px-6 py-8 md:px-10 lg:px-16">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-black/40">
-              03 / Finish
+          <div className="border-b border-black/10 px-6 py-7 md:border-b-0 md:border-r md:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/40">
+              03 / Ice
+            </p>
+            <p className="mt-2 font-semibold">Salting</p>
+          </div>
+
+          <div className="px-6 py-7 md:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/40">
+              04 / Winter
+            </p>
+            <p className="mt-2 font-semibold">Property Management</p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          INTRODUCTION
+      ========================================================= */}
+
+      <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
+              Winter Property Maintenance
             </p>
 
-            <p className="mt-2 text-lg font-semibold">
-              A job site left finished.
+            <h2 className="mt-6 text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
+              Keep the property
+              <br />
+              moving through winter.
+            </h2>
+          </div>
+
+          <div className="max-w-3xl">
+            <p className="text-lg leading-9 text-black/60">
+              Snow affects more than the appearance of a property. Driveways,
+              parking areas, entrances and pedestrian routes all need to remain
+              usable when winter weather arrives.
             </p>
+
+            <p className="mt-6 text-base leading-8 text-black/50">
+              Lorca Contracting provides snow clearing and winter property
+              maintenance for residential and commercial properties in
+              Mississauga and surrounding GTA communities.
+            </p>
+
+            <p className="mt-6 text-base leading-8 text-black/50">
+              The service plan can be built around the areas that matter most
+              to the property, from vehicle access and parking to sidewalks,
+              entrances and ice-prone pedestrian surfaces.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          LARGE WINTER IMAGE
+      ========================================================= */}
+
+      <section className="px-6 pb-24 md:px-10 lg:px-16 lg:pb-32">
+        <div className="mx-auto max-w-[1500px]">
+          <div className="relative overflow-hidden">
+            <img
+              src={WINTER_IMAGE}
+              alt="Winter snow conditions"
+              loading="lazy"
+              className="aspect-[16/7] w-full object-cover"
+            />
+
+            <div className="absolute bottom-5 left-5 bg-black px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white">
+              Mississauga · GTA
+            </div>
           </div>
         </div>
       </section>
@@ -335,132 +331,44 @@ function HomePage() {
           SERVICES
       ========================================================= */}
 
-      <section
-        id="services"
-        className="px-6 py-24 md:px-10 lg:px-16 lg:py-32"
-      >
-        <div className="mx-auto max-w-[1500px]">
-          <div className="mb-16 grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
-                What we build
-              </p>
-
-              <p className="mt-4 text-sm font-medium uppercase tracking-[0.2em]">
-                Mississauga · GTA
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
-                Hardscaping that
-                <br />
-                belongs on the property.
-              </h2>
-
-              <p className="mt-7 max-w-2xl text-base leading-8 text-black/55">
-                Every project starts with the property itself — its layout,
-                elevation, drainage, access and how you want to use the space.
-              </p>
-            </div>
-          </div>
-
-          {/* SERVICE CARDS */}
-
-          <div className="grid gap-px overflow-hidden border border-black/10 bg-black/10 md:grid-cols-2">
-            {services.map((service) => (
-              <Link
-                key={service.number}
-                to={service.href}
-                className="group bg-[#f3f1ec] p-4 transition hover:bg-white"
-              >
-                <div className="relative aspect-[16/9] overflow-hidden bg-black/5">
-                  <img
-                    src={service.image}
-                    alt={service.imageAlt}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-
-                  <div className="absolute left-4 top-4 bg-black px-3 py-2 text-xs font-bold tracking-[0.2em] text-white">
-                    {service.number}
-                  </div>
-                </div>
-
-                <div className="flex items-start justify-between gap-6 px-2 pb-5 pt-7">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-black/40">
-                      {service.label}
-                    </p>
-
-                    <h3 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
-                      {service.title}
-                    </h3>
-
-                    <p className="mt-4 max-w-xl text-sm leading-7 text-black/55">
-                      {service.description}
-                    </p>
-
-                    <span className="mt-6 inline-block text-xs font-bold uppercase tracking-[0.2em]">
-                      View Service
-                    </span>
-                  </div>
-
-                  <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-black/15 text-lg transition group-hover:bg-black group-hover:text-white">
-                    ↗
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          THE LORCA APPROACH
-      ========================================================= */}
-
       <section className="bg-[#171717] px-6 py-24 text-white md:px-10 lg:px-16 lg:py-32">
-        <div className="mx-auto grid max-w-[1500px] gap-16 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">
-              The Lorca approach
+        <div className="mx-auto max-w-[1500px]">
+          <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">
+                Winter Services
+              </p>
+
+              <h2 className="mt-6 text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
+                Snow is only
+                <br />
+                part of the job.
+              </h2>
+            </div>
+
+            <p className="max-w-2xl text-base leading-8 text-white/50">
+              Winter maintenance can involve vehicle areas, pedestrian access
+              and changing ice conditions. The service scope should reflect how
+              the property actually needs to function throughout winter.
             </p>
-
-            <h2 className="mt-6 text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
-              The surface is
-              <br />
-              only the beginning.
-            </h2>
-
-            <p className="mt-8 max-w-xl text-base leading-8 text-white/55">
-              A beautiful patio or walkway means very little if the work
-              underneath it was rushed. Our approach puts preparation,
-              structure and finishing details into the same conversation.
-            </p>
-
-            <a
-              href="#estimate"
-              className="mt-10 inline-flex border border-white/30 px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] transition hover:bg-white hover:text-black"
-            >
-              Start a Project
-            </a>
           </div>
 
-          <div className="border-t border-white/15">
-            {buildPoints.map((point) => (
+          <div className="mt-16 grid gap-px bg-white/15 md:grid-cols-2">
+            {snowServices.map((service) => (
               <div
-                key={point.number}
-                className="grid gap-5 border-b border-white/15 py-9 md:grid-cols-[80px_260px_1fr]"
+                key={service.number}
+                className="bg-[#171717] p-8 md:p-10 lg:p-12"
               >
-                <span className="text-sm font-bold text-white/30">
-                  {point.number}
+                <span className="text-xs font-bold tracking-[0.2em] text-white/30">
+                  {service.number}
                 </span>
 
-                <h3 className="text-xl font-semibold">{point.title}</h3>
+                <h3 className="mt-6 text-2xl font-semibold tracking-tight md:text-3xl">
+                  {service.title}
+                </h3>
 
-                <p className="text-sm leading-7 text-white/50">
-                  {point.description}
+                <p className="mt-5 max-w-xl text-sm leading-7 text-white/50">
+                  {service.description}
                 </p>
               </div>
             ))}
@@ -469,62 +377,274 @@ function HomePage() {
       </section>
 
       {/* =========================================================
-          PROJECT WORK
+          COMMERCIAL SNOW REMOVAL
       ========================================================= */}
 
-      <section
-        id="projects"
-        className="px-6 py-24 md:px-10 lg:px-16 lg:py-32"
-      >
+      <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-2 lg:items-center">
+          <div>
+            <img
+              src={COMMERCIAL_IMAGE}
+              alt="Commercial property during winter"
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </div>
+
+          <div className="lg:pl-8">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
+              Commercial Snow Removal
+            </p>
+
+            <h2 className="mt-6 text-4xl font-semibold leading-[1] tracking-[-0.045em] md:text-5xl">
+              Keep customers,
+              <br />
+              staff and vehicles moving.
+            </h2>
+
+            <p className="mt-7 max-w-xl text-base leading-8 text-black/55">
+              Commercial winter maintenance can cover the exterior areas that
+              customers, employees, tenants and service vehicles rely on during
+              winter conditions.
+            </p>
+
+            <div className="mt-9 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-black/15 pt-8">
+              {commercialAreas.map((area) => (
+                <div
+                  key={area}
+                  className="flex items-center gap-3 text-sm font-semibold"
+                >
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
+                  {area}
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="#estimate"
+              className="mt-10 inline-flex bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition hover:bg-black/75"
+            >
+              Commercial Estimate
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          COMMERCIAL PROPERTY TYPES
+      ========================================================= */}
+
+      <section className="border-y border-black/10 bg-[#e7e3da] px-6 py-20 md:px-10 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-[1500px]">
-          <div className="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
+            Commercial Properties
+          </p>
+
+          <div className="mt-10 grid gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Retail & Plazas",
+              "Office Properties",
+              "Commercial Facilities",
+              "Multi-Unit Properties",
+            ].map((property) => (
+              <div
+                key={property}
+                className="bg-[#e7e3da] px-6 py-8 text-lg font-semibold"
+              >
+                {property}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          RESIDENTIAL
+      ========================================================= */}
+
+      <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-2 lg:items-center">
+          <div className="order-2 lg:order-1">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
+              Residential Snow Removal
+            </p>
+
+            <h2 className="mt-6 text-4xl font-semibold leading-[1] tracking-[-0.045em] md:text-5xl">
+              Get out of the
+              <br />
+              driveway without the shovel.
+            </h2>
+
+            <p className="mt-7 max-w-xl text-base leading-8 text-black/55">
+              Residential winter service can cover the vehicle and pedestrian
+              areas around your home so snow clearing doesn't become another
+              job waiting for you after every snowfall.
+            </p>
+
+            <div className="mt-9 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-black/15 pt-8">
+              {residentialAreas.map((area) => (
+                <div
+                  key={area}
+                  className="flex items-center gap-3 text-sm font-semibold"
+                >
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
+                  {area}
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="#estimate"
+              className="mt-10 inline-flex bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition hover:bg-black/75"
+            >
+              Residential Estimate
+            </a>
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <img
+              src={RESIDENTIAL_IMAGE}
+              alt="Residential property covered in snow"
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          SIDEWALKS
+      ========================================================= */}
+
+      <section className="bg-[#171717] px-6 py-24 text-white md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-2 lg:items-center">
+          <img
+            src={SIDEWALK_IMAGE}
+            alt="Snow covered pedestrian walkway"
+            loading="lazy"
+            className="aspect-[4/3] w-full object-cover"
+          />
+
+          <div className="lg:pl-8">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">
+              Sidewalks & Entrances
+            </p>
+
+            <h2 className="mt-6 text-4xl font-semibold leading-[1] tracking-[-0.045em] md:text-5xl">
+              Don't forget the
+              <br />
+              people on foot.
+            </h2>
+
+            <p className="mt-7 max-w-xl text-base leading-8 text-white/55">
+              Parking and driveway access are only part of winter property
+              maintenance. Pedestrian routes, building entrances, sidewalks
+              and steps may also need to be cleared as part of the service
+              plan.
+            </p>
+
+            <div className="mt-9 border-t border-white/15 pt-8">
+              <p className="max-w-xl text-sm leading-7 text-white/45">
+                The exact areas included are established with the property
+                owner before service begins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          SALTING / ICE MANAGEMENT
+      ========================================================= */}
+
+      <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
+              Salting & Ice Management
+            </p>
+
+            <h2 className="mt-6 text-4xl font-semibold leading-[1] tracking-[-0.045em] md:text-6xl">
+              Snow leaves.
+              <br />
+              Ice can stay.
+            </h2>
+
+            <p className="mt-7 max-w-xl text-base leading-8 text-black/55">
+              Clearing snow does not always eliminate slippery conditions.
+              Where appropriate, de-icing service can be included for
+              designated paved surfaces as part of the property's winter
+              maintenance plan.
+            </p>
+
+            <div className="mt-10 space-y-5 border-t border-black/15 pt-8">
+              <div>
+                <h3 className="font-semibold">Parking Areas</h3>
+                <p className="mt-2 text-sm leading-7 text-black/50">
+                  Ice-management service for agreed vehicle areas where
+                  appropriate.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold">Walkways & Entrances</h3>
+                <p className="mt-2 text-sm leading-7 text-black/50">
+                  De-icing attention can be directed toward pedestrian areas
+                  included in the service scope.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold">Changing Conditions</h3>
+                <p className="mt-2 text-sm leading-7 text-black/50">
+                  Winter conditions can change after snow clearing, which is
+                  why snow and ice management should be considered together.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src={SALT_IMAGE}
+            alt="Winter ice and snow conditions"
+            loading="lazy"
+            className="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* =========================================================
+          WINTER MANAGEMENT
+      ========================================================= */}
+
+      <section className="border-y border-black/10 bg-[#dcd7cd] px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto max-w-[1500px]">
+          <div className="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
-                Project work
+                Winter Property Management
               </p>
 
-              <h2 className="mt-5 text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
-                From tired space
+              <h2 className="mt-6 text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
+                Plan before
                 <br />
-                to finished space.
+                the snow arrives.
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-7 text-black/50">
-              Real project photography can be added here as the Lorca
-              portfolio grows.
-            </p>
-          </div>
+            <div>
+              <p className="max-w-2xl text-base leading-8 text-black/55">
+                Every property is different. A commercial parking area has
+                different priorities from a residential driveway, and a busy
+                entrance may need different attention than a low-traffic
+                portion of the property.
+              </p>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="group relative overflow-hidden bg-black">
-              <div className="aspect-[4/3]">
-                <img
-                  src={BEFORE_IMAGE}
-                  alt="Outdoor space before renovation"
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="absolute left-5 top-5 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em]">
-                Before
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden bg-black">
-              <div className="aspect-[4/3]">
-                <img
-                  src={AFTER_IMAGE}
-                  alt="Finished outdoor hardscape renovation"
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="absolute left-5 top-5 bg-black px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white">
-                After
-              </div>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-black/55">
+                Establishing the service areas before winter makes it clear
+                which vehicle routes, pedestrian areas and ice-management
+                zones are included.
+              </p>
             </div>
           </div>
         </div>
@@ -534,37 +654,34 @@ function HomePage() {
           PROCESS
       ========================================================= */}
 
-      <section className="border-y border-black/10 bg-[#e7e3da] px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+      <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
         <div className="mx-auto max-w-[1500px]">
           <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
-                How we work
+                How It Works
               </p>
 
               <h2 className="mt-6 text-4xl font-semibold leading-[0.98] tracking-[-0.045em] md:text-6xl">
-                A clear process.
+                A clear winter
                 <br />
-                No guessing.
+                service plan.
               </h2>
-
-              <p className="mt-7 max-w-md text-sm leading-7 text-black/50">
-                From the first conversation to the final cleanup, every stage
-                of the project has a purpose.
-              </p>
             </div>
 
-            <div>
-              {process.map((step) => (
+            <div className="border-t border-black/15">
+              {winterProcess.map((step) => (
                 <div
                   key={step.number}
-                  className="grid gap-5 border-t border-black/15 py-9 md:grid-cols-[80px_230px_1fr]"
+                  className="grid gap-5 border-b border-black/15 py-9 md:grid-cols-[80px_230px_1fr]"
                 >
                   <span className="text-sm font-bold text-black/30">
                     {step.number}
                   </span>
 
-                  <h3 className="text-xl font-semibold">{step.title}</h3>
+                  <h3 className="text-xl font-semibold">
+                    {step.title}
+                  </h3>
 
                   <p className="text-sm leading-7 text-black/50">
                     {step.description}
@@ -577,60 +694,15 @@ function HomePage() {
       </section>
 
       {/* =========================================================
-          LOCAL SEO CONTENT
-      ========================================================= */}
-
-      <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-14 lg:grid-cols-2">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
-                Hardscaping in Mississauga
-              </p>
-
-              <h2 className="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.045em] md:text-5xl">
-                Outdoor construction
-                <br />
-                designed for the GTA.
-              </h2>
-            </div>
-
-            <div className="space-y-6 text-base leading-8 text-black/55">
-              <p>
-                Lorca Contracting provides hardscaping and outdoor renovation
-                services in Mississauga and surrounding GTA communities.
-                Projects can include interlocking patios, walkways, steps,
-                retaining features and backyard improvements.
-              </p>
-
-              <p>
-                We approach each project as a complete system rather than
-                simply placing a finished surface. Layout, excavation,
-                preparation, grading, installation and finishing all
-                contribute to how the completed project looks and performs.
-              </p>
-
-              <p>
-                Whether you're replacing an aging patio, improving a walkway
-                or turning an underused backyard into an outdoor living space,
-                we'll start with the property and project scope before
-                recommending the build.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
           SERVICE AREA
       ========================================================= */}
 
       <section className="bg-[#171717] px-6 py-20 text-white md:px-10 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">
-                Service area
+                Winter Service Area
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold leading-none tracking-[-0.045em] md:text-6xl">
@@ -653,18 +725,58 @@ function HomePage() {
       </section>
 
       {/* =========================================================
-          FAQ
+          LOCAL SEO CONTENT
       ========================================================= */}
 
       <section className="px-6 py-24 md:px-10 lg:px-16 lg:py-32">
-        <div className="mx-auto max-w-[1100px]">
+        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-2">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
+              Snow Removal in Mississauga
+            </p>
+
+            <h2 className="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.045em] md:text-5xl">
+              Winter maintenance
+              <br />
+              for local properties.
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-base leading-8 text-black/55">
+            <p>
+              Lorca Contracting provides commercial and residential snow
+              removal in Mississauga and surrounding GTA communities.
+            </p>
+
+            <p>
+              Winter services can include snow plowing, driveway clearing,
+              sidewalk and entrance clearing, salting and broader winter
+              property maintenance depending on the property and agreed
+              service scope.
+            </p>
+
+            <p>
+              Commercial property owners and homeowners can contact Lorca with
+              the property location and the areas requiring winter maintenance
+              so we can review the project and confirm service availability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          FAQ
+      ========================================================= */}
+
+      <section className="border-t border-black/10 px-6 py-24 md:px-10 lg:px-16 lg:py-32">
+        <div className="mx-auto max-w-[1050px]">
           <div className="mb-14">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
-              Frequently asked
+              Snow Removal FAQ
             </p>
 
             <h2 className="mt-5 text-4xl font-semibold leading-none tracking-[-0.045em] md:text-5xl">
-              Questions before we build.
+              Winter service questions.
             </h2>
           </div>
 
@@ -689,7 +801,7 @@ function HomePage() {
       </section>
 
       {/* =========================================================
-          ESTIMATE CTA
+          FINAL CTA
       ========================================================= */}
 
       <section
@@ -701,18 +813,18 @@ function HomePage() {
         <div className="relative mx-auto max-w-[1500px]">
           <div className="max-w-5xl">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/40">
-              Start your project
+              Winter Service
             </p>
 
             <h2 className="mt-6 text-5xl font-semibold leading-[0.9] tracking-[-0.055em] md:text-8xl">
-              Have a space
+              Get ready before
               <br />
-              that needs work?
+              the next snowfall.
             </h2>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-black/55">
-              Tell us what you're looking to build, where you're located and
-              what you're working with.
+              Tell us whether the property is residential or commercial, where
+              it is located and which areas need snow and ice management.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -727,7 +839,7 @@ function HomePage() {
                 href="mailto:lorcacontractiong@gmail.com"
                 className="inline-flex items-center justify-center border border-black/20 bg-white/20 px-9 py-5 text-xs font-bold uppercase tracking-[0.2em] transition hover:bg-white/50"
               >
-                Email Lorca
+                Request Snow Service
               </a>
             </div>
           </div>
@@ -761,14 +873,21 @@ function HomePage() {
 
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-black/40">
-                Location
+                Service Area
               </p>
 
               <p className="mt-2 font-semibold">
-                Mississauga · Ontario
+                Mississauga · GTA
               </p>
             </div>
           </div>
+
+          <Link
+            to="/"
+            className="mt-12 inline-block text-xs font-bold uppercase tracking-[0.2em] underline underline-offset-4"
+          >
+            Back to Home
+          </Link>
         </div>
       </section>
 
